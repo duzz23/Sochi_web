@@ -1,22 +1,38 @@
-Hi 👋 My name is Andrey Varganov
-Backend developer
-Programming languages: Python, CSS, HTML Databases: MySQL. PostgreSQL, QSLAlchemy Frameworks: Django, Django Rest Framework(DRF), Wegtail, Experience in leadership positions in projects in various fields. Successful start-up of projects from scratch and implementation of the set goals. Formation of tasks for the team and control of the stages of their implementation. Practice and experience in finance and financial planning, partly in the tax code, negotiating at a high level. Purpose: completely re-profiled in the field of IT technologies, took a courses in the direction of "data science" and backend developer in Python I am interested in the financial sphere, modern technologies, I like to travel. I am fond of: motorcycle travel, surfing, team sports. I try to keep my mind and body in balance and develop every day.
+Порядок установки Клонировать репозиторий к себе, установить и активировать виртуальное окружение:
 
-🌍  I'm based in I was born in Russia, but I often live in other countries
-✉️  You can contact me at duzz#mail.ru
-🧠  I'm learning a new technologies
-🤝  I'm open to collaborating on interesting projects
-Skills
-Python HTML5 Bootstrap Fast API MySQL PostgreSQL Django
+python -m venv venv
+venv\Scripts\activate.bat 
+git clone https://github.com....
+перейти в папку проекта, установить зависимости:
 
-Socials
- 
+cd sending
+pip install -r requirements.txt
+запустить и применить миграции:
 
-Badges
-My GitHub Stats
+python manage.py makemigrations
+python manage.py migrate
+Запустить проект:
 
-duzz23's GitHub stats
+python manage.py runserver
 
 
+Данный сайт реализован на Wagtail CMS
+Имя: admin
+Пароль: admin
 
-Top Languages
+Задача:
+Переделать сайт с динамичными блоками, для удобства администрирования: 
+Header menu, мероприятия, спонсоры, социальные сети, спикеры, организаторы, все это динамические блоки. 
+Посторена структура блоков с "Спикерами" и "Мероприятей" Many to Many
+Реализовано время проведения меропрятей и возможности зарегистрироваться в актуальное время. 
+
+
+This site is implemented on Wagtail CMS
+Name: admin
+Password: admin
+
+A task:
+Redesign the site with dynamic blocks for ease of administration:
+Header menu, events, sponsors, social networks, speakers, organizers, all these are dynamic blocks.
+The structure of blocks with "Speakers" and "Events" Many to Many has been built
+Implemented the time of the events and the possibility to register at the current time.
