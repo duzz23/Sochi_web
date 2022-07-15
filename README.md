@@ -37,14 +37,12 @@ Header menu, events, sponsors, social networks, speakers, organizers, all these 
 The structure of blocks with "Speakers" and "Events" Many to Many has been built
 Implemented the time of the events and the possibility to register at the current time.
 
-<img width="1280" alt="Снимок экрана 2022-07-15 в 15 06 00" src="https://user-images.githubusercontent.com/19858001/179220834-7b642150-dde3-4d54-bf63-4c58dd60ea11.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 12 06 37" src="https://user-images.githubusercontent.com/19858001/179220842-494e79f6-b5f3-437d-9a2c-418267918d73.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 12 06 46" src="https://user-images.githubusercontent.com/19858001/179220859-72fc2758-f18d-460f-9df1-5b509cb5d0ae.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 15 06 10" src="https://user-images.githubusercontent.com/19858001/179220863-bfcd9907-404c-4606-8c62-88ae7bfdd763.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 12 07 08" src="https://user-images.githubusercontent.com/19858001/179220867-6b603d46-fb3f-4d44-9ffb-22d30313c5b0.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 12 06 22" src="https://user-images.githubusercontent.com/19858001/179220871-37481f99-124e-4371-b956-8c5a40eb8a41.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 15 05 48" src="https://user-images.githubusercontent.com/19858001/179220877-3d26d17d-a5f2-4219-aeee-46cd4eabf691.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 15 06 28" src="https://user-images.githubusercontent.com/19858001/179220883-d254f195-e72e-4918-9ca2-4767c9aed1ad.png">
-<img width="1280" alt="Снимок экрана 2022-07-15 в 12 06 14" src="https://user-images.githubusercontent.com/19858001/179220884-7ca74350-862b-42f3-a6cd-c3b41dbc5f67.png">
+<img width="1280" alt="Снимок экрана 2022-07-15 в 12 06 14" src="https://user-images.githubusercontent.com/19858001/179221250-454b9c2c-2e26-46fd-bf64-a4a9d3fbb972.png">
+<img width="1280" alt="Снимок экрана 2022-07-15 в 12 06 22" src="https://user-images.githubusercontent.com/19858001/179221267-37dd70fb-bef3-4a11-a7e6-5fdcdb9811a7.png">
+<img width="1280" alt="Снимок экрана 2022-07-15 в 12 07 08" src="https://user-images.githubusercontent.com/19858001/179221273-93c6f849-a082-4ba5-99de-1878c448169e.png">
+<img width="1280" alt="Снимок экрана 2022-07-15 в 15 05 48" src="https://user-images.githubusercontent.com/19858001/179221278-d833c10b-2db2-4758-bfa5-dd58b7c5b8ee.png">
+<img width="1280" alt="Снимок экрана 2022-07-15 в 15 06 10" src="https://user-images.githubusercontent.com/19858001/179221280-66c895db-23a2-4a4c-934b-46072e36c1bb.png">
+<img width="1280" alt="Снимок экрана 2022-07-15 в 15 06 28" src="https://user-images.githubusercontent.com/19858001/179221282-e17aedcb-4415-42b9-b2e2-d451b0a321ae.png">
+
 
 
