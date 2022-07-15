@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  db:
+    image: sqlite3
+    ports:
+      - 5433:5432
+
+    env_file:
+      - docker-compose.env
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./data/db:/var/lib/sqlite3/data
+    ports:
+      - 8000:8000
+    env_file:
+      - docker-compose.env
+    depends_on:
+      - db
+

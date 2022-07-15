@@ -1,0 +1,21 @@
+<!doctype html>
+{% load static wagtailcore_tags wagtailimages_tags %}
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+         {% include 'home/_head.html' %}
+
+    </head>
+    <body class="page page_page">
+
+        {% block content %}
+
+        <script src="{% static '/js/vendors.js' %}"></script>
+        <script src="{% static '/js/index.js'%}"></script>
+        {% endblock %}
+    </body>
+</html>
+

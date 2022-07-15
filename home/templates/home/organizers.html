@@ -1,0 +1,95 @@
+{% extends 'home/layout.html' %}
+{% load social_tags %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+
+    {% include 'home/_header_menu_mobile.html' %}
+    <div class="page-top" style="background-color: transparent; margin-bottom: 0">
+        {% include "home/_header_menu.html" %}
+    </div>
+
+    <section class="organizers">
+        <div class="organizers-wrap">
+
+            <div class="organizers-header">
+                <h1 class="organizers-title">Организаторы</h1>
+            </div>
+
+
+            <div class="organizers-list">
+{% for cat in contributor %}
+
+
+        {{ cat.name }}
+
+
+{% endfor %}
+                {% for org in self.organizers %}
+
+
+                    <div class="organizers-item">
+                        <div class="organizers-pic">
+
+                            <img class="organizers-img" alt="" {% image org.image fill-250x250 %}
+
+                        </div>
+                        <div class="organizers-description">
+                            <div class="organizers-name">
+                                {{ org.name }}
+                            </div>
+                            <div class="organizers-telegram">
+
+                                <a href="{{ org.telegram }}" target="_blank" class="organizers-link">
+                                    <i class="fab fa-telegram-plane organizers-icon"></i>
+                                </a>
+                            </div>
+                            <div class="organizers-text">
+                                {{ org.description }}
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+                <div class="organizers-header">
+                    <h1 class="organizers-title">Контрибьюторы</h1>
+                {% for cont in self.contributors %}
+
+                </div>
+
+                <div class="organizers-list">
+
+                    <div class="organizers-item">
+                        <div class="organizers-pic">
+
+                            <img class="organizers-img" alt="" {% image cont.image fill-250x250 %}
+                        </div>
+                        <div class="organizers-description">
+                            <div class="organizers-name">
+                                {{ cont.name }}
+                            </div>
+                            <div class="organizers-telegram">
+                                <a href="{{ cont.telegram }}" target="_blank" class="organizers-link">
+                                    <i class="fab fa-telegram-plane organizers-icon"></i>
+
+                                </a>
+                            </div>
+                            <div class="organizers-text">
+                                {{ cont.description }}
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+                {% endfor %}
+
+
+    </section>
+
+    {% include "home/blocks_to_include/_contacts_questions.html" %}
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<!doctype html>
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+<div class="mobileMenu">
+    <div class="mobileMenu-content">
+        <div class="mobileMenu-header">
+            <div class="mobileMenu-logo">
+                <div class="logo"><img class="logo-img"
+                                       src="{% static 'img/logo.svg' %}" alt=""
+                                       role="presentation"/></div>
+            </div>
+            <div class="toogleMenu toogleMenu_close"><img class="toogleMenu-img"
+                                                          src="{% static '/img/icons/close.svg' %}"
+                                                          alt=""
+                                                          role="presentation"/></div>
+
+
+        </div>
+        <div class="mobileMenu-menu">
+            {% include "home/_menu_list.html" %}
+        </div>
+    </div>
+    <div class="mobileMenu-social">
+        <div class="socials socials_mobile">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+{% extends "home/layout.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+{% include "home/_header_menu_mobile.html" %}
+<div class="page-top" style="background-color: transparent; margin-bottom: 0;" xmlns="http://www.w3.org/1999/html">
+    {% include "home/_header_menu.html" %}
+</div>
+{% for events in blogs %}
+    <section class="event-list">
+        <div class="list-wrap">
+            <div class="list-content">
+                <a href="{% pageurl events %}" class="mainEvent-link" target="_blank" src="{{ img.url }}">
+                    <div class="mainEvent">
+                        {% image events.image_event fill-1120x630 as tmp_photo %}
+                        <img src="{{ tmp_photo.url }}" class="listEvent-img" alt="" role="presentation"/>
+                        <div class="listEvent-bg"></div>
+                        <div class="mainEvent-wrap">
+                            <div class="mainEvent-content">
+                                <div class="mainEvent-title">
+                                {{ events.title_event }}:&nbsp;<br>{{ events.teaser }}
+                                </div>
+                                <div class="mainEvent-description">
+                                {{ events.content_event }}
+
+                                    <div class="mainEvent-note">
+                                        <div class="mainEvent-date">
+                                        {% include "home/svg/events_svg/detail_on_main/_main_event_date.html" %}
+                                        <strong>{{ events.date_event | date:"d M" }}</strong>&nbsp;{{ events.date_event | date:"Y" }}
+                                        </div>
+                                        {% if events.time_zone %}
+                                        <div class="mainEvent-register mainEvent-register-open">
+                                        Регистрация открыта
+                                        </div>
+                                        {% else %}
+                                        <div class="mainEvent-register">
+                                        Регистрация окончена
+                                        {% endif %}
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+{% endfor %}
+{% include "home/blocks_to_include/_contacts_questions.html" %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "./layout.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+
+{% block content %}
+
+<div class="page-top">
+
+    {% include 'home/_header_menu_mobile.html' %}
+    {% include 'home/_header_menu.html' %}
+
+    {% for block in page.body %}
+        {{  block }}
+    {% endfor %}
+
+    {% include 'home/blocks_to_include/_contacts_questions.html' %}
+</div>
+{% endblock %}

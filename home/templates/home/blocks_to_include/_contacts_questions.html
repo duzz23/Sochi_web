@@ -1,0 +1,81 @@
+{% load static wagtailcore_tags wagtailimages_tags social_tags %}
+
+{% menu_tags 'menu' as navigation %}
+
+<section class="contacts" id="contacts">
+    <div class="contacts-wrap">
+        <div class="contacts-woman"><img class="svg" src="{% static 'img/contacts/woman.svg' %}" alt=""
+                                         role="presentation"/>
+        </div>
+        <div class="contacts-sea"><img class="svg" src="{% static '/img/contacts/sea.svg' %}" alt=""
+                                       role="presentation"/></div>
+        <div class="contacts-content">
+            <div class="contacts-title">Остались вопросы?</div>
+            <div class="contacts-subtitle">Мы с радостью ответим</div>
+            <div class="contacts-list">
+                <div class="contacts-item">
+                    {% include 'home/svg/contact_questions/_mail.html' %}
+                    <a class="contacts-value" href="mailto:hitech.sochi.community@gmail.com">
+                        hitech.sochi.community@gmail.com
+                    </a>
+                </div>
+                <div class="contacts-item">
+                    <img src="{% static '/img/icons/feedback.svg' %}" alt="" class="contacts-feedback-icon">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX3Usz6CYPVBvcgjWRfUque_oak3sFyNhHyA4xjW1ND7C4eA/viewform" class="contacts-value" target="_blank">
+                        Обратная связь
+                    </a>
+                </div>
+                <div class="contacts-item">
+                    <img src="{% static '/img/icons/microphone.svg' %}" alt="" class="contacts-feedback-icon">
+                        <a href="https://docs.google.com/forms/d/1bHZmyaJuBIzjicPa4tspg3Rav-g-LIJ31UF7nzMqP7Q/viewform?edit_requested=true" class="contacts-value" target="_blank">
+                        Стать спикером
+                    </a>
+                </div>
+                <div class="contacts-item">
+                    <img src="{% static '/img/icons/placeholder.svg' %}" alt="" class="contacts-feedback-icon">
+                    <a class="contacts-value" href="{% slugurl 'organizers' %}" target="_blank">
+                        Организаторы и контрибьютеры
+                    </a>
+                </div>
+                <div class="contacts-sepor"></div>
+                <div class="contacts-item">
+                    {% include 'home/svg/contact_questions/_telegram.html' %}
+                    <a class="contacts-value" href="https://t.me/it_sochi" target="_blank">
+                        t.me/it_sochi
+                    </a>
+                </div>
+                <div class="contacts-item">
+                    {% include 'home/svg/contact_questions/_vk.html' %}
+                    <a class="contacts-value" href="https://vk.com/south_itcommunity" target="_blank">
+                        vk.com/south_itcommunity
+                    </a>
+                </div>
+                <div class="contacts-item">
+                    {% include 'home/svg/contact_questions/_youtube.html' %}
+                    <a class="contacts-value" href="https://www.youtube.com/channel/UCUIZtHMNJNS1OxgD23LBgmA" target="_blank">
+                        youtube.com/itsochi
+                    </a>
+                </div>
+            </div>
+            <div class="contacts-logo">
+                <div class="logo"><img class="logo-img" src="{% static '/img/logo.svg' %}" alt=""
+                                       role="presentation"/>
+                </div>
+            </div>
+            <div class="github">
+                <div class="github-content">
+                    <div class="github-title">Этот сайт с открытым исходным кодом</div>
+                    <div class="github-text">Поможем его улучшить?</div>
+                </div>
+                <a class="github-fork" href="https://github.com/itsochi-community/site" target="_blank">
+                    {% include 'home/svg/contact_questions/_github.html' %}
+                    Fork on Github</a></div>
+            <div class="contacts-footer">
+                <a href="{% slugurl 'privacy-policy' %}" class="contacts-link">Политика безопасности</a>
+
+                <div class="contacts-slash">/</div>
+                <div class="contacts-text">&#169; Все права защищены</div>
+            </div>
+        </div>
+    </div>
+</section>

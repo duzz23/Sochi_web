@@ -1,0 +1,88 @@
+{% extends 'home/layout.html' %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% load wagtailimages_tags %}
+{% block content %}
+    {% include 'home/_header_menu_mobile.html' %}
+    <div class="page-top" style="background-color: transparent; margin-bottom: 0">
+        {% include "home/_header_menu.html" %}
+    </div>
+
+
+
+    <div class="intro">{{ page.intro|richtext }}</div>
+
+    <section class="meetup__blog">
+        <div class="meet-wrap">
+            <div class="center__image">
+                <div class="meetup__image">
+                    {% image page.image_event fill-1120x630 %}
+
+                </div>
+            </div>
+
+            <div class="meet-border">
+                <div class="meetup_items">
+
+                    <div class="meet__item meet-tem">
+                        <div class="meetup__text">
+                            <i class="far fa-calendar-alt meet-icon"></i>
+
+                            <strong>{{ page.date_event | date:"d M" }}</strong>&nbsp;{{ page.date_event | date:"Y" }}
+                            &nbsp;|&nbsp;{{ page.date_event | date:"h i" }}
+
+                        </div>
+                    </div>
+
+                    <div class="meet__item meet-tem">
+                        <div class="meetup__text">
+                            <i class="fas fa-map-marker-alt meet-icon"></i>
+                            {{ page.location_event }}</div>
+                    </div>
+
+                    {% if page.time_zone %}
+                        <div class="meet__item">
+                            <a class="button button_color_yellow meet-button-clip" type="button" page="_blank"
+                               href="{{ this.link }}"><span
+                                    class="button-text">Зарегистрироваться</span><span
+                                    class="button-icon">{% include "home/svg/button_icon_svg/button_icon.html" %}</span>
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="meet__item">
+                            <div class="button button_color_grey meet-button-clip" type="button" page="_blank"><span
+                                    class="button-text">Зарегистрироваться</span><span
+                                    class="button-icon">{% include "home/svg/button_icon_svg/button_icon.html" %}</span>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+    <div class="meetup__information">
+                <div class="meet-invite">
+
+                    <div class="meet-sea"><img class="svg" src="{%  static '/img/mission/sea.svg' %}" alt=""
+                                               role="presentation"/>
+                    </div>
+
+                    <div class="meet-points"><img class="svg" src="{% static '/img/mission/points.svg' %}" alt=""
+                                                  role="presentation"/>
+                    </div>
+
+                    <div class="meetup__title">
+                        {{ page.title_event }}
+                    </div>
+                </div>
+
+                <div class="event__description">
+                    <div class="meetup__description__information">
+                        {{ page.content_event }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {% include 'home/blocks_to_include/_contacts_questions.html' %}
+{% endblock %}

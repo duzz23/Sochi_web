@@ -1,0 +1,17 @@
+<section class="partners" id="partners">
+
+
+    <div class="partners-wrap">
+        <div class="partners-description">
+            <h1 class="partners-title">Партнёры</h1>
+        </div>
+        <div class="partners-content">
+            {% for obj in objects %}
+                <a class="partners-item partners-item-pycon" href="{{ obj.link }}" target="_blank">                                     {{ obj.icon_svg | safe }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+

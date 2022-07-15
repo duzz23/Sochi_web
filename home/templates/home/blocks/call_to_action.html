@@ -1,0 +1,103 @@
+{% load social_tags %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+<section class="mission" id="mission">
+    <div class="mission-wrap">
+        <div class="mission-points"><img class="svg" src="{% static '/img/mission/points.svg' %}" alt=""
+                                         role="presentation"/>
+        </div>
+        <div class="mission-sea"><img class="svg" src="{% static 'img/mission/sea.svg' %}" alt="" role="presentation"/>
+        </div>
+        <div class="mission-description"><h1 class="mission-title">Наша миссия</h1>
+            <div class="mission-text">Объединеняем между собой специалистов, которые живут в Сочи,<br/>переехали на
+                ПМЖ или находятся в командировке
+            </div>
+            <div class="mission-center">
+                <img class="mission-ellipse" src="{% static '/img/mission/sun.svg' %}" alt="">
+            </div>
+        </div>
+        <div class="mission-content">
+            <div class="mission-about">
+                <div class="whoWe">
+                    <div class="whoWe-title">Кто мы?</div>
+                    <div class="whoWe-text">Мы — профессиональное сообщество digital-специалистов в городе Сочи.
+                        Проводим тематические мероприятия в области IT-технологий.
+                    </div>
+                </div>
+                <div class="weAre">
+                    <div class="weAre-title">Нас уже</div>
+                    <div class="weAre-specialists">
+                        <b>>840</b><span class="icons">👨‍👩‍</span><br/>специалистов
+                    </div>
+                </div>
+            </div>
+            <div class="mission-blocks">
+                <div class="missions">
+                    <div class="missions-wrap">
+
+                        <div class="block swiper-slide-active" style="width: 309.333px; margin-right: 16px;">
+                            <div class="block-wrap">
+                                <div class="block-pic">
+                                    <img class="block-img" src="{% static '/img/mission/programming.png' %}" alt="" role="presentation"/>
+                                </div>
+                                <div class="block-content">
+                                    <div class="block-title">Образование</div>
+                                    <div class="block-description">Неважно, новичок или умудрённый двадцатилетним
+                                        опытом разработчик —
+                                        приходите узнавать новое и общаться.&nbsp;<b>Вход свободный!</b></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block swiper-slide-active" style="width: 309.333px; margin-right: 16px;">
+                            <div class="block-wrap">
+                                <div class="block-pic">
+                                    <img class="block-img" src="{% static 'img/mission/connection.png' %}" alt="" role="presentation"/>
+                                </div>
+                                <div class="block-content">
+                                    <div class="block-title">Нетворкинг</div>
+                                    <div class="block-description">Создаем пространство для&nbsp;<b>живого
+                                        общения</b>&nbsp;и
+                                        комфортного обучения. Условия для поиска партнеров и сотрудников
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block swiper-slide-active" style="width: 309.333px; margin-right: 16px;">
+                            <div class="block-wrap">
+                                <div class="block-pic">
+                                    <img class="block-img" src="{% static '/img/mission/magic.png' %}" alt="" role="presentation"/>
+                                </div>
+                                <div class="block-content">
+                                    <div class="block-title">Организация</div>
+                                    <div class="block-description">В рамках сообщества проводятся митапы,
+                                        мастер-классы, конференции с
+                                        количеством посетителей&nbsp;<b>до 500 человек!</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="missions-pagination"></div>
+                </div>
+            </div>
+                <div class="mission-actions">
+                    <a class="button button_color_yellow button_clip" href="https://t.me/it_sochi" target="_blank"
+                       type="button">
+                        <span class="button-text">Присоединиться к сообществу</span>
+                        <span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                       xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M5 13H16.865L13.232 17.36C12.878 17.784 12.936 18.415 13.36 18.768C13.785 19.122 14.415 19.064 14.769 18.64L19.769 12.64C19.808 12.593 19.827 12.538 19.856 12.486C19.88 12.444 19.909 12.408 19.927 12.362C19.972 12.247 19.999 12.126 19.999 12.004C19.999 12.003 20 12.001 20 12C20 11.999 19.999 11.997 19.999 11.996C19.999 11.874 19.972 11.753 19.927 11.638C19.909 11.592 19.88 11.556 19.856 11.514C19.827 11.462 19.808 11.407 19.769 11.36L14.769 5.36C14.57 5.123 14.286 5 14 5C13.774 5 13.547 5.076 13.36 5.232C12.936 5.585 12.878 6.216 13.232 6.64L16.865 11H5C4.448 11 4 11.448 4 12C4 12.552 4.448 13 5 13Z"></path>
+</svg>
+                    </span>
+                    </a>
+                    <div class="socials socials_inContent" style="margin-left:8px">
+
+                        {% social_menu "home/social/simple_menu.html" %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

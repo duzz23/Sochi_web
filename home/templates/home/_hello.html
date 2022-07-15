@@ -1,0 +1,45 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+<section class="hello" id="hello">
+    <div class="hello-wrap">
+        <div class="hello-points">
+            <img class="svg" src="{% static '/img/hello/points.svg' %}" alt="" role="presentation"/>
+        </div>
+        <div class="hello-sea">
+            <img class="svg" src="{% static '/img/hello/sea.svg' %}" alt="" role="presentation"/>
+        </div>
+        <div class="hello-girl">
+            <img class="svg" src="{% static '/img/hello/girl.svg' %}" alt="" role="presentation"/>
+        </div>
+
+        <div class="hello-swim">
+            <img class="svg" src="{% static '/img/hello/swim.svg' %}" alt="" role="presentation"/>
+        </div>
+        <div class="hello-description">
+            <h1 class="hello-title">
+                {% block title %}
+                    {{ this.title | safe }}
+                {% endblock %}
+            </h1>
+            <div class="hello-cloud">
+                <img class="svg" src="{% static '/img/icons/cloud.svg' %}" alt="" role="presentation"/>
+            </div>
+            <div class="hello-text">
+                {% block body %}
+                    {{ this.body | safe }}
+                {% endblock %}
+            </div>
+            <div class="hello-action">
+                <a class="button button_clip" href="https://t.me/it_sochi" type="button" target="_blank">
+                    <span class="button-text">
+                        Присоединиться к сообществу
+                    </span>
+                    <span class="button-icon">
+                        {% include "home/svg/button_icon_svg/button_icon.html" %}
+                    </span>
+                </a>
+            </div>
+
+
+         </div>
+    </div>
+</section>

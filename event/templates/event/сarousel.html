@@ -1,0 +1,124 @@
+{% extends "home/layout.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+{% load social_tags %}
+    <section class="events" id="events">
+        <div class="events-wrap">
+            <div class="events-description">
+                <h1 class="events-title">Мероприятия</h1>
+            </div>
+            <div class="events-content">
+                {% for event in events %}
+                    {% if event == events.first %}
+
+                        <a href="{% pageurl event %}" class="mainEvent-link" target="_blank" src="{{ img.url }}">
+                            <div class="mainEvent">
+                                {% image event.image_event fill-960x400 as tmp_photo %}
+                                <img src="{{ tmp_photo.url }}" class="mainEvent-img" alt="" role="presentation"/>
+
+
+                                <div class="mainEvent-bg"></div>
+                                <div class="mainEvent-wrap">
+                                    <div class="mainEvent-content">
+                                        <div class="mainEvent-title">{{ event.title_event }}:&nbsp;<br>{{ event.teaser }}
+                                        </div>
+                                        <div class="mainEvent-description">
+                                            {{ event.content_event }}
+                                            <div class="mainEvent-note">
+                                                <div class="mainEvent-date">
+                                                    {% include "home/svg/events_svg/detail_on_main/_main_event_date.html" %}
+                                                    <strong>{{ event.date_event | date:"d b" }}</strong>&nbsp;{{ event.date_event | date:"Y" }}
+                                                </div>
+
+                                                {% if event.time_zone %}
+                                                    <div class="mainEvent-register mainEvent-register-open">Регистрация
+                                                        открыта
+                                                    </div>
+                                                {% else %}
+                                                    <div class="mainEvent-register">Регистрация окончена</div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="allInvite">
+                    <div class="allInvite-header">
+                        <a href="{{ events_list.url }}" class="allInvite-title" target="_blank">Все мероприятия</a>
+                        <div class="arrow">
+                            <div class="arrow-left">
+                                {% include "home/svg/arows/arrow_left.html" %}
+                            </div>
+                            <div class="arrow-sepor">/</div>
+                            <div class="arrow-right">
+                                {% include "home/svg/arows/arrow_right.html" %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="allInvite-eventList">
+                        <div class="allInvite-wrap">
+
+                            {% for event in events %}
+
+                                <div class="event swiper-slide-active">
+                                    <a class="event-wrap" href="{{ event.url }}">
+
+                                        <div class="event-pic">
+                                            {% image event.image_event fill-310x174 as tmp_photo %}
+
+                                            <img src="{{ tmp_photo.url }}" class="event-img" alt=""
+                                                 role="presentation"/>
+
+                                            <div class="event-bg"></div>
+                                            {% if event.time_zone %}
+
+                                                <div class="event-register event-register-open">Регистрация открыта
+                                                </div>
+                                            {% else %}
+
+                                                <div class="event-register">Регистрация окончена</div>
+                                            {% endif %}
+                                        </div>
+
+                                        <div class="event-content">
+
+                                            <div class="event-title">
+                                                {{ event.title_event }}.&nbsp;<br>{{ event.teaser }}
+                                            </div>
+
+                                            <div class="event-date">
+
+
+                                                <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+
+                                                          d="M15 18H3C2.449 18 2 17.551 2 17V11H16V17C16 17.551 15.551 18 15 18ZM3 4H4V5C4 5.55 4.45 6 5 6C5.55 6 6 5.55 6 5V4H12V5C12 5.55 12.45 6 13 6C13.55 6 14 5.55 14 5V4H15C15.551 4 16 4.449 16 5V9H2V5C2 4.449 2.449 4 3 4ZM15 2H14V1C14 0.45 13.55 0 13 0C12.45 0 12 0.45 12 1V2H6V1C6 0.45 5.55 0 5 0C4.45 0 4 0.45 4 1V2H3C1.346 2 0 3.346 0 5V17C0 18.654 1.346 20 3 20H15C16.654 20 18 18.654 18 17V5C18 3.346 16.654 2 15 2Z"></path>
+                                                </svg>
+
+                                                <strong>{{ event.date_event | date:"d M" }}</strong>&nbsp;{{ event.date_event | date:"Y" }}
+                                                &nbsp;
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% partner_list "home/partners/partners_logo.html" %}
+    </section>
+
+
+
+
+{% endblock %}

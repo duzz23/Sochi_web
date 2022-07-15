@@ -1,0 +1,10 @@
+<div class="socials-list">
+{% for obj in objects %}
+    <div class="socials-item">
+        <a class="socials-link" href="{{ obj.link }}" target="_blank">
+            {{ obj.icon_svg | safe }}
+        </a>
+    </div>
+{% endfor %}
+</div>
+

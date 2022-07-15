@@ -1,0 +1,38 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+<section class="hello" id="hello">
+    <div class="hello-wrap">
+        <div class="hello-points">
+            <img class="svg" src="{% static '/img/hello/points.svg' %}" alt="" role="presentation"/>
+        </div>
+        <div class="hello-sea">
+            <img class="svg" src="{% static '/img/hello/sea.svg' %}" alt="" role="presentation"/>
+        </div>
+        <div class="hello-girl">
+            <img class="svg" src="{% static '/img/hello/girl.svg' %}" alt="" role="presentation"/>
+        </div>
+        <div class="hello-description">
+            <h1 class="hello-title">
+                {{ value.title }}
+            </h1>
+            <div class="hello-cloud">
+                <img class="svg" src="{% static '/img/icons/cloud.svg' %}" alt="" role="presentation"/>
+            </div>
+            <div class="hello-text">
+                {{ value.body }}
+            </div>
+            <div class="hello-action">
+                <a class="button button_clip" href="{{ value.call_to_action_link }}" type="button" target="_blank">
+                    <span class="button-text">
+                        {{ value.call_to_action_label | default:"Ударь меня!" }}
+                    </span>
+                    <span class="button-icon">
+                        {% include "home/svg/button_icon_svg/button_icon.html" %}
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="hello-swim">
+            <img class="svg" src="{% static '/img/hello/swim.svg' %}" alt="" role="presentation"/>
+        </div>
+    </div>
+</section>
